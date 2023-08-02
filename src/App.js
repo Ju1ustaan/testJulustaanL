@@ -5,6 +5,7 @@ import Table from "./component/Table";
 
 const App = () => {
   const [data, setData] = useState({})
+  // делаю запрос и получаю в мою переменню data оъект
   useEffect(() => {
     const getData = async () => {
       let {data} = await axios('https://dpg.gg/test/calendar.json')
@@ -12,10 +13,10 @@ const App = () => {
     }
     getData()
   }, [])
-  console.log(Object.keys(data));
+
   return (
     <div className="App">
-      <Table/>
+      <Table data={data}/>
     </div>
   );
 }
