@@ -43,17 +43,22 @@ a {
   gap: 2px;
 }
 
+.cell__wrapper {
+  
+}
 .cell {
+  position: relative;
   min-height: 15px;
   max-width: 15px;
   background-color: #ededed;
   cursor: pointer;
   font-size: 12px;
+  z-index: 0;
 }
 
-/* .cell:hover {
-  border: 1px solid rgba(0, 0, 0, 0.50);
-} */
+.cell span {
+  display: none;
+}
 
 .weeks__wrapper {
   display: flex;
@@ -80,5 +85,85 @@ a {
   color: #959494;
   font-family: Inter;
   font-size: 12px;
+  font-weight: 400;
+}
+
+.suuport__wrapper {
+  margin-top: 15px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.suuport__text {
+  color: #959494;
+  font-size: 8px;
+  font-weight: 400;
+  margin-right: 6.45px;
+}
+
+.suuport__text:last-child {
+  margin-left: 6.45px;
+}
+
+.suuport__cell {
+  width: 15px;
+  height: 15px;
+}
+
+.suuport__cell:not(:last-child) {
+  margin-right: 2px;
+}
+
+.suuport__cell1 {
+  background-color: #EDEDED;
+}
+
+.suuport__cell2 {
+  background-color: rgba(172, 213, 242, 1);
+}
+
+.suuport__cell3 {
+  background-color: rgba(127, 168, 201, 1);
+}
+
+.suuport__cell4 {
+  background-color: rgba(82, 123, 160, 1);
+}
+
+.suuport__cell5 {
+  background-color: rgba(37, 78, 119, 1);
+}
+
+.cell-info {
+  position: absolute;
+  left: 50%;
+  top: -100%;
+  transform: translate(-50%, -80%);
+  padding: 6px 9px 5px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 3px;
+  min-width: 145px;
+  text-align: center;
+  z-index: 99;
+}
+
+.cell-info svg {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+
+}
+.cell-info__value {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  
+}
+
+.cell-info__date {
+  color: #7C7C7C;
+  font-size: 10px;
   font-weight: 400;
 }
